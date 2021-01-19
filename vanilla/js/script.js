@@ -26,7 +26,6 @@ for(var x = 0; x < bici.length; x++){
 }
 
 console.log(array);
-var controlol = 0;
 
 for(var i = 0; i < array.length; i++){
   if(array[0] < array[1]){
