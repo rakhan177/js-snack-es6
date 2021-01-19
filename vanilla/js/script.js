@@ -26,13 +26,23 @@ for(var x = 0; x < bici.length; x++){
 }
 
 console.log(array);
+var control = 0;
+
 
 for(var i = 0; i < array.length; i++){
   if(array[0] < array[1]){
-    console.log('quella che pesa meno pesa: ' + array[0])
+    control = 1;
   }else if(array[1] < array[2]){
-    console.log('quella che pesa meno pesa: ' + array[1])
+    control = 2;
   }else{
-    console.log('quella che pesa meno pesa: ' + array[2])
+    control = 3;
   }
+}
+
+if(control === 1){
+  console.log(bici[0].nome)
+}else if(control === 2){
+  console.log(bici[1].nome)
+}else{
+  console.log(bici[2].nome)
 }
