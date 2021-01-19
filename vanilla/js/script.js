@@ -15,34 +15,12 @@ var bici = [
   },
 ];
 
-var array = [];
+var biciLeggera = bici[0];
 
-for(var x = 0; x < bici.length; x++){
-  for(var key in bici[x]){
-    if(key === 'peso'){
-      array.push(bici[x][key])
-    }
+for (var x = 1; x < bici.length; x++){
+  if(bici[x].peso < biciLeggera.peso){
+    biciLeggera = bici[x];
   }
 }
 
-console.log(array);
-var control = 0;
-
-
-for(var i = 0; i < array.length; i++){
-  if(array[0] < array[1]){
-    control = 1;
-  }else if(array[1] < array[2]){
-    control = 2;
-  }else{
-    control = 3;
-  }
-}
-
-if(control === 1){
-  console.log(bici[0].nome)
-}else if(control === 2){
-  console.log(bici[1].nome)
-}else{
-  console.log(bici[2].nome)
-}
+console.log(biciLeggera.nome);
